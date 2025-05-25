@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Classic White T-Shirt",
+    "description": "100% cotton, soft-touch fabric",
+    "price": 19.99,
+    "inStock": true,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "name": "Running Shoes",
+    "description": "Lightweight and durable",
+    "price": 49.99,
+    "inStock": true,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "name": "Denim Jacket",
+    "description": "Classic style for any season",
+    "price": 89.99,
+    "inStock": false,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 4,
+    "name": "Leather Backpack",
+    "description": "Spacious and stylish",
+    "price": 129.99,
+    "inStock": true,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 5,
+    "name": "Wireless Headphones",
+    "description": "Noise-canceling over-ear design",
+    "price": 99.99,
+    "inStock": true,
+    "image": "https://via.placeholder.com/150"
+  }
+]
