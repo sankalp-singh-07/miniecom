@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useProducts } from '../context/ProductContext';
+import ProductCard from './ProductCard';
 
 export type eachProductType = {
 	description: string;
@@ -10,7 +12,7 @@ export type eachProductType = {
 };
 
 const ProductsList = () => {
-	const [products, setProducts] = useState<eachProductType[]>([]);
+	const { products, setProducts } = useProducts();
 
 	useEffect(() => {
 		const fetchProducts = async () => {
@@ -21,6 +23,12 @@ const ProductsList = () => {
 
 		fetchProducts();
 	}, []);
+
+	return (
+		<>
+			<ProductCard products={products} />
+		</>
+	);
 };
 
 export default ProductsList;
