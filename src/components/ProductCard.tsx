@@ -12,7 +12,11 @@ const ProductCard = ({ products }: ProductCardType) => {
 	let productsToShow =
 		input.trim() === ''
 			? products
-			: products.filter((product) => product.name.includes(input));
+			: products.filter((product) =>
+					product.name
+						.toLowerCase()
+						.includes(input.toLowerCase().trim())
+			  );
 
 	return productsToShow.map((product) => {
 		const { description, id, inStock, name, price } = product;

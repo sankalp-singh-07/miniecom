@@ -12,17 +12,23 @@ export type eachProductType = {
 };
 
 const ProductsList = () => {
-	const { products, setProducts } = useProducts();
+	const { products, setProducts, loading, setLoading } = useProducts();
 
 	useEffect(() => {
+		setLoading(true);
 		const fetchProducts = async () => {
-			const res = await fetch('public/products.json');
+			const res = await fetch('/products.json');
 			const data = await res.json();
 			setProducts(data);
+			setLoading(false);
 		};
 
 		fetchProducts();
 	}, []);
+
+	if (loading) {
+		return <p>LOADING...</p>;
+	}
 
 	return (
 		<>
