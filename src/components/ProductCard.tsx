@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useSearch } from '../context/SearchContext';
 import type { eachProductType } from './ProductsList';
 
